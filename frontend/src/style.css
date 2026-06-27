@@ -1,0 +1,42 @@
+:root {
+  color: #e8edf2;
+  background: #11151a;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  box-sizing: border-box;
+  width: min(1100px, 100%);
+  margin: auto;
+  padding: 2rem;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.status {
+  color: #f2bd59;
+}
+
+.status.connected {
+  color: #55d187;
+}
+
+img,
+.empty {
+  display: grid;
+  width: 100%;
+  min-height: 360px;
+  place-items: center;
+  border-radius: 0.5rem;
+  background: #090b0e;
+  object-fit: contain;
+}
