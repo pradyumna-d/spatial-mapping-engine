@@ -226,6 +226,7 @@ def test_browser_disconnect_cleans_subscriptions_and_tasks() -> None:
             await asyncio.sleep(0)
             assert not provider._subscribers
             assert not provider._status_subscribers
+            assert not backend_app.vision_pipeline._subscribers
             assert set(asyncio.all_tasks()) == baseline
         finally:
             backend_app.provider = original

@@ -1,7 +1,8 @@
 # Mapping Engine
 
-Realtime RTSP frame distribution foundation. One `FrameProvider` owns the
-camera connection and decoded frames; local consumers subscribe asynchronously.
+Realtime RTSP perception foundation. One `FrameProvider` owns the camera
+connection and decoded frames; the `VisionPipeline` subscribes to it and
+publishes structured ORB results for the React canvas overlay.
 
 ## Setup
 
@@ -17,12 +18,12 @@ cd frontend && npm install
 ./scripts/run_frontend.sh
 ```
 
-Open <http://localhost:5173>. Override the camera with `RTSP_URL` and the
-browser backend address with `VITE_BACKEND_URL`.
+Open <http://localhost:5173>. The default source is
+`rtsp://admin:zaq1xsw2@192.168.1.81:5543/live/channel0`; override it with
+`RTSP_URL`. Override the browser backend address with `VITE_BACKEND_URL`.
 
 ## Test
 
 ```bash
 .venv/bin/pytest
 ```
-
